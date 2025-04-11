@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const box = document.createElement("div");
+            box.style.width = "50px";
+            box.style.height = "50px";
+            box.style.backgroundColor = "red";
+            box.style.position = "absolute";
+            box.style.left = "0px";
+            document.body.appendChild(box);
+
+            
+            const rect = document.createElement("div");
+            rect.style.width = "50px";
+            rect.style.height = "100px";
+            rect.style.backgroundColor = "blue";
+            rect.style.position = "relative";
+            rect.style.left ="20px";
+            rect.style.display = "block";
+            document.body.appendChild(rect);
+            
+            let position = 0;
+            
+            document.addEventListener("keydown", (event) => {
+                if (event.key === "d") {
+                    position -= 5;
+                    box.style.left = position + "px";
+                } 
+            });
+        });
+        </script>
+</body>
+</html>
